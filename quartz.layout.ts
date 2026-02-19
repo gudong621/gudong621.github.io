@@ -29,6 +29,7 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
+    Component.TachikomaStatus(), // <--- 仪表盘实装在这里！
     Component.Flex({
       components: [
         {
