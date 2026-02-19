@@ -1,3 +1,74 @@
 @use "./base.scss";
 
-// put your custom CSS here!
+// --- Tachikoma Tactical Interface (GitS Style) ---
+
+:root[managed-dark-mode="dark"] {
+  // Grid background
+  background-image: 
+    linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
+  background-size: 30px 30px;
+  background-attachment: fixed;
+
+  // Neon Headings
+  h1, h2, h3 {
+    text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+    letter-spacing: 0.05em;
+    border-left: 4px solid var(--secondary);
+    padding-left: 1rem;
+    margin-top: 2rem;
+  }
+
+  // Links glow
+  a {
+    transition: all 0.2s ease;
+    &:hover {
+      text-shadow: 0 0 10px var(--secondary);
+    }
+  }
+
+  // Code blocks as terminal panels
+  pre {
+    border: 1px solid var(--gray);
+    background-color: #0d1117 !important;
+    box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.05);
+  }
+
+  // Sidebar navigation tweaks
+  .sidebar {
+    border-right: 1px dashed var(--gray);
+  }
+
+  // Graph view as Radar
+  .graph {
+    circle {
+      fill: var(--secondary) !important;
+      filter: drop-shadow(0 0 3px var(--secondary));
+    }
+    line {
+      stroke: var(--tertiary) !important;
+      opacity: 0.4;
+    }
+  }
+
+  // Custom "Scanline" effect (subtle)
+  &::before {
+    content: " ";
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    z-index: 9999;
+    background-size: 100% 4px, 3px 100%;
+    pointer-events: none;
+    opacity: 0.3;
+  }
+}
+
+// Global font adjustments
+body {
+  font-feature-settings: "ss01", "ss02", "cv01";
+}
