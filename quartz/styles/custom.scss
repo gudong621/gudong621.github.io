@@ -72,7 +72,6 @@ body {
 // --- Mobile Responsiveness & Layout Fixes ---
 @media all and (max-width: 800px) {
   // Global padding fix for both themes to avoid menu overlap
-  // Targeting multiple potential layout containers
   .page, #quartz-body, .center {
     padding-top: 4.5rem !important;
   }
@@ -85,13 +84,27 @@ body {
     line-height: 1.4 !important;
   }
 
+  // --- Sidebar/Explorer Layout Fixes ---
+  // Reduce font size and increase line height for long titles in sidebar
+  .sidebar li > a {
+    font-size: 0.8rem !important;
+    line-height: 1.5 !important;
+    padding: 0.2rem 0 !important;
+    display: block;
+  }
+
+  // Add a bit more spacing between list items for clarity
+  .sidebar li {
+    margin-bottom: 0.6rem !important;
+  }
+
   // Mobile-specific grid scaling
   :root[saved-theme="dark"], :root:not([saved-theme="light"]) {
     background-size: 25px 25px !important;
   }
 
-  // Ensure the floating menu icon is always visible but doesn't overlap text
+  // Ensure the floating menu icon is always visible
   .sidebar.left {
-    z-index: 10000; // Above scanlines
+    z-index: 10000;
   }
 }
