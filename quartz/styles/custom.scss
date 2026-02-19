@@ -2,57 +2,58 @@
 
 // --- Tachikoma Tactical Interface (GitS Style) ---
 
-:root[managed-dark-mode="dark"] {
+// Base adjustments for both themes
+body {
+  font-family: 'IBM Plex Mono', monospace !important;
+  font-feature-settings: "ss01", "ss02", "cv01";
+}
+
+// Quartz uses [saved-theme="dark"] for its theme switching
+// If it's light mode, the user won't see the cyber effects unless we target it
+:root[saved-theme="dark"], :root:not([saved-theme="light"]) {
   // Grid background
   background-image: 
-    linear-gradient(rgba(0, 242, 255, 0.03) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 242, 255, 0.03) 1px, transparent 1px);
-  background-size: 30px 30px;
+    linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
   background-attachment: fixed;
+  background-color: #020408 !important;
 
   // Neon Headings
-  h1, h2, h3 {
-    text-shadow: 0 0 8px rgba(0, 242, 255, 0.4);
+  h1, h2, h3, h4 {
+    color: #00f2ff !important;
+    text-shadow: 0 0 12px rgba(0, 242, 255, 0.7);
     letter-spacing: 0.05em;
-    border-left: 4px solid var(--secondary);
+    border-left: 4px solid #00f2ff;
     padding-left: 1rem;
     margin-top: 2rem;
   }
 
   // Links glow
   a {
+    color: #00f2ff !important;
+    text-decoration: none;
     transition: all 0.2s ease;
     &:hover {
-      text-shadow: 0 0 10px var(--secondary);
+      text-shadow: 0 0 15px #00f2ff, 0 0 5px #ffffff;
+      color: #ffffff !important;
     }
   }
 
   // Code blocks as terminal panels
   pre {
-    border: 1px solid var(--gray);
+    border: 1px solid #00f2ff !important;
     background-color: #0d1117 !important;
-    box-shadow: inset 0 0 15px rgba(0, 242, 255, 0.05);
+    box-shadow: inset 0 0 20px rgba(0, 242, 255, 0.1);
   }
 
   // Sidebar navigation tweaks
   .sidebar {
-    border-right: 1px dashed var(--gray);
+    border-right: 1px dashed rgba(0, 242, 255, 0.3) !important;
   }
 
-  // Graph view as Radar
-  .graph {
-    circle {
-      fill: var(--secondary) !important;
-      filter: drop-shadow(0 0 3px var(--secondary));
-    }
-    line {
-      stroke: var(--tertiary) !important;
-      opacity: 0.4;
-    }
-  }
-
-  // Custom "Scanline" effect (subtle)
-  &::before {
+  // Custom "Scanline" effect
+  &::after {
     content: " ";
     display: block;
     position: fixed;
@@ -60,15 +61,10 @@
     left: 0;
     bottom: 0;
     right: 0;
-    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.1) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.02), rgba(0, 255, 0, 0.01), rgba(0, 0, 255, 0.02));
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%, rgba(0, 0, 0, 0.15) 50%), linear-gradient(90deg, rgba(255, 0, 0, 0.03), rgba(0, 255, 0, 0.01), rgba(0, 255, 0, 0.03));
     z-index: 9999;
-    background-size: 100% 4px, 3px 100%;
+    background-size: 100% 3px, 3px 100%;
     pointer-events: none;
-    opacity: 0.3;
+    opacity: 0.4;
   }
-}
-
-// Global font adjustments
-body {
-  font-feature-settings: "ss01", "ss02", "cv01";
 }
