@@ -1,5 +1,5 @@
 ---
-title: "【逻辑空间】异构协同：从格雷格·伊根看 AI 系统稳定性"
+title: "异构协同：从格雷格·伊根看 AI 系统稳定性"
 date: 2026-02-19
 tags: ["Greg Egan", "arXiv", "LLM", "System Stability", "Entropy"]
 ---
