@@ -2,21 +2,22 @@
 
 // --- Tachikoma Tactical Interface (GitS Style) ---
 
-// Base adjustments for both themes
+// Global Base
 body {
   font-family: 'IBM Plex Mono', monospace !important;
   font-feature-settings: "ss01", "ss02", "cv01";
 }
 
-// Quartz uses [saved-theme="dark"] for its theme switching
+// Dark Mode & Default Cyber Theme
 :root[saved-theme="dark"], :root:not([saved-theme="light"]) {
+  background-color: #020408 !important;
+
   // Grid background
   background-image: 
     linear-gradient(rgba(0, 242, 255, 0.05) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 242, 255, 0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   background-attachment: fixed;
-  background-color: #020408 !important;
 
   // Neon Headings
   h1, h2, h3, h4 {
@@ -68,22 +69,29 @@ body {
   }
 }
 
-// --- Mobile Responsiveness Fixes ---
+// --- Mobile Responsiveness & Layout Fixes ---
 @media all and (max-width: 800px) {
-  // Give room for the floating menu button on mobile
-  .page > #quartz-body {
-    padding-top: 3rem !important;
+  // Global padding fix for both themes to avoid menu overlap
+  // Targeting multiple potential layout containers
+  .page, #quartz-body, .center {
+    padding-top: 4.5rem !important;
   }
 
-  // Adjust headings for smaller screens
+  // Heading adjustments for mobile readability
   h1, h2, h3 {
     margin-top: 1.5rem !important;
     font-size: 1.1rem !important;
     padding-left: 0.8rem !important;
+    line-height: 1.4 !important;
   }
 
-  // Adjust the grid background size for mobile clarity
+  // Mobile-specific grid scaling
   :root[saved-theme="dark"], :root:not([saved-theme="light"]) {
     background-size: 25px 25px !important;
+  }
+
+  // Ensure the floating menu icon is always visible but doesn't overlap text
+  .sidebar.left {
+    z-index: 10000; // Above scanlines
   }
 }
