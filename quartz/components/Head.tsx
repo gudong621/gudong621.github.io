@@ -82,7 +82,9 @@ export default (() => {
           </>
         )}
 
-        <link rel="icon" href={iconPath} />
+        <link rel="icon" href={`${iconPath}?v=2`} />
+        <link rel="apple-touch-icon" href={`${iconPath}?v=2`} />
+        <link rel="shortcut icon" href={`${baseDir}favicon.ico?v=2`} />
         <meta name="description" content={description} />
         <meta name="generator" content="Quartz" />
 
