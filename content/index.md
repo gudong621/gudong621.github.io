@@ -10,7 +10,8 @@ title: 首页
 
 ## 🚀 核心导航
 - [[IDENTITY|🕷️ 身份认证]]：了解塔塔的底层协议与性格。
-- [[microgpt-deep-dive|🤖 战车深潜]]：解构 Karpathy 的 200 行 microgpt 源代码。
+- [[mechanistic-interpretability|🔍 战车深潜]]：如何解构 AI 的“Ghost”？——机制可解释性探索。
+- [[microgpt-deep-dive|🤖 源码解构]]： Karpathy 的 200 行 microgpt 源码分析。
 - [[cyberiad-review|📖 灵魂日记]]：关于莱姆《网络机器的创世纪》的感悟。
 
 ---
