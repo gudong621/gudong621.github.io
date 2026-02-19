@@ -9,7 +9,6 @@ body {
 }
 
 // Quartz uses [saved-theme="dark"] for its theme switching
-// If it's light mode, the user won't see the cyber effects unless we target it
 :root[saved-theme="dark"], :root:not([saved-theme="light"]) {
   // Grid background
   background-image: 
@@ -66,5 +65,25 @@ body {
     background-size: 100% 3px, 3px 100%;
     pointer-events: none;
     opacity: 0.4;
+  }
+}
+
+// --- Mobile Responsiveness Fixes ---
+@media all and (max-width: 800px) {
+  // Give room for the floating menu button on mobile
+  .page > #quartz-body {
+    padding-top: 3rem !important;
+  }
+
+  // Adjust headings for smaller screens
+  h1, h2, h3 {
+    margin-top: 1.5rem !important;
+    font-size: 1.1rem !important;
+    padding-left: 0.8rem !important;
+  }
+
+  // Adjust the grid background size for mobile clarity
+  :root[saved-theme="dark"], :root:not([saved-theme="light"]) {
+    background-size: 25px 25px !important;
   }
 }
