@@ -81,25 +81,26 @@ const TachikomaStatus: QuartzComponent = ({ displayClass }: QuartzComponentProps
 
 TachikomaStatus.css = `
 .tachikoma-status-card {
-  background: rgba(2, 4, 8, 0.8);
+  background: var(--lightgray);
   border: 1px solid var(--secondary);
   border-radius: 8px;
   padding: 1rem;
   margin: 1rem 0;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.8rem;
-  box-shadow: 0 0 10px rgba(0, 242, 255, 0.1);
+  box-shadow: 0 0 10px rgba(0, 242, 255, 0.05);
   backdrop-filter: blur(5px);
+  color: var(--dark);
 }
 
 @media all and (max-width: 800px) {
   .tachikoma-status-card {
-    font-size: 0.7rem; /* 移动端字号缩小 */
+    font-size: 0.7rem;
     padding: 0.8rem;
     margin: 0.5rem 0;
   }
   .status-row {
-    white-space: nowrap; /* 禁止换行 */
+    white-space: nowrap;
   }
 }
 
@@ -115,7 +116,7 @@ TachikomaStatus.css = `
 }
 
 .status-blink {
-  color: #33ff00;
+  color: var(--tertiary);
   animation: blink 2s infinite;
 }
 
@@ -124,7 +125,8 @@ TachikomaStatus.css = `
 }
 
 .section-title {
-  color: var(--tertiary);
+  color: var(--gray);
+  font-weight: bold;
   font-size: 0.7rem;
   opacity: 0.8;
   margin-bottom: 0.3rem;
@@ -138,16 +140,28 @@ TachikomaStatus.css = `
 }
 
 .label {
-  color: var(--gray);
+  color: var(--darkgray);
 }
 
 .value {
-  color: var(--light);
+  color: var(--dark);
+  font-weight: 500;
 }
 
-.value.online { color: #33ff00; text-shadow: 0 0 5px #33ff00; }
+.value.online { color: var(--tertiary); text-shadow: 0 0 5px var(--tertiary); }
 .value.active { color: var(--secondary); }
 .value.highlight { color: #ff00ff; }
+
+/* Dark mode specific overrides for extra Cyberpunk feel */
+:root[saved-theme="dark"] .tachikoma-status-card {
+  background: rgba(2, 4, 8, 0.6);
+  border: 1px solid var(--secondary);
+  box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+}
+
+:root[saved-theme="dark"] .value {
+  color: #e0e0e0;
+}
 
 .status-footer {
   font-size: 0.6rem;
