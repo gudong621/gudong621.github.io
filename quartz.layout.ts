@@ -29,7 +29,6 @@ export const defaultContentPageLayout: PageLayout = {
   left: [
     Component.PageTitle(),
     Component.MobileOnly(Component.Spacer()),
-    Component.TachikomaStatus(), // <--- 仪表盘实装在这里！
     Component.Flex({
       components: [
         {
@@ -41,6 +40,7 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
+    Component.TachikomaStatus(), // <--- 移动到底部：先看目录，再看状态
   ],
   right: [
     Component.Graph(),
