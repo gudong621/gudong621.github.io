@@ -76,6 +76,30 @@ body {
     padding-top: 4.5rem !important;
   }
 
+  /* 移动端仪表盘样式重置与优化 */
+  /* 仅针对 mobile-only 容器内的卡片生效 */
+  .mobile-only .tachikoma-status-card {
+    font-size: 0.75rem;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    
+    /* 核心修正：强制独占一行 */
+    display: block;
+    width: 100%;
+    max-width: 100%;
+    flex: 0 0 100%; 
+    box-sizing: border-box;
+    clear: both;
+  }
+  .mobile-only .status-row {
+    flex-wrap: nowrap;
+    white-space: nowrap; 
+  }
+  .mobile-only .value {
+    text-align: right;
+    max-width: none; 
+  }
+
   // Heading adjustments for mobile readability
   h1, h2, h3 {
     margin-top: 1.5rem !important;
