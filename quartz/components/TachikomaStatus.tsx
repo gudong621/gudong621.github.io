@@ -93,20 +93,24 @@ TachikomaStatus.css = `
   color: var(--dark);
 }
 
+/* 移动端独立卡片化适配 */
 @media all and (max-width: 800px) {
   .tachikoma-status-card {
-    font-size: 0.75rem; /* 稍微调回一点，太小看不清 */
+    font-size: 0.75rem;
     padding: 0.8rem;
-    margin: 0.5rem 0;
+    margin: 1rem auto; /* 居中显示 */
+    width: 90%; /* 占据大部分宽度，防止被压扁 */
+    min-width: 280px; /* 强制最小宽度，确保文字不换行 */
+    max-width: 350px; /* 限制最大宽度，保持精致感 */
+    display: block; /* 确保它是块级元素，独占一行 */
   }
-  /* 允许长文字换行，但保持右对齐 */
   .status-row {
     flex-wrap: nowrap;
-    white-space: normal; 
+    white-space: nowrap; 
   }
   .value {
     text-align: right;
-    max-width: 60%; /* 防止挤压标签 */
+    max-width: none; /* 移除宽度限制，允许文字舒展 */
   }
 }
 
