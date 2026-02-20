@@ -93,7 +93,6 @@ TachikomaStatus.css = `
   color: var(--dark);
 }
 
-/* 移动端独立卡片化适配 */
 @media all and (max-width: 800px) {
   .tachikoma-status-card {
     font-size: 0.75rem;
