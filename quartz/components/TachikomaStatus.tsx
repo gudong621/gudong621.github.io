@@ -92,6 +92,17 @@ TachikomaStatus.css = `
   backdrop-filter: blur(5px);
 }
 
+@media all and (max-width: 800px) {
+  .tachikoma-status-card {
+    font-size: 0.7rem; /* 移动端字号缩小 */
+    padding: 0.8rem;
+    margin: 0.5rem 0;
+  }
+  .status-row {
+    white-space: nowrap; /* 禁止换行 */
+  }
+}
+
 .status-header {
   color: var(--secondary);
   font-weight: bold;
