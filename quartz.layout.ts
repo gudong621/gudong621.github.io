@@ -18,7 +18,6 @@ export const sharedPageComponents: SharedLayout = {
 // components for pages that display a single page (e.g. a single note)
 export const defaultContentPageLayout: PageLayout = {
   beforeBody: [
-    Component.MobileOnly(Component.TachikomaStatus()), // <--- 移动端：置顶显示！
     Component.ConditionalRender({
       component: Component.Breadcrumbs(),
       condition: (page) => page.fileData.slug !== "index",
@@ -41,12 +40,15 @@ export const defaultContentPageLayout: PageLayout = {
       ],
     }),
     Component.Explorer(),
-    Component.DesktopOnly(Component.TachikomaStatus()), // <--- 电脑端：保留在侧边栏
   ],
   right: [
     Component.Graph(),
+    Component.DesktopOnly(Component.TachikomaStatus()), // <--- 电脑端：紧贴图谱下方
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
+  ],
+  afterBody: [
+    Component.MobileOnly(Component.TachikomaStatus()), // <--- 移动端：移至文章底部
   ],
 }
 
