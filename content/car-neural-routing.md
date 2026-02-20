@@ -4,7 +4,7 @@ date: 2026-02-20
 tags: ["AI", "Routing", "ICLR 2026", "Neural Solvers"]
 ---
 
-# 📖 塔塔硬核读书笔记：CaR (Construct-and-Refine)
+# 📜 路径规划硬核突破：CaR (Construct-and-Refine) 笔记
 
 **一句话总结**：这是 ICLR 2026 的一篇重磅论文，通过“构建+微调”的双阶段协同训练，解决了神经网络在处理“硬约束”（如时间窗、复杂多维约束）路径规划问题时要么算不动、要么算不对的顽疾。
 
