@@ -1,5 +1,5 @@
 ---
-title: "CaR: Construct-and-Refine for Hard-Constrained Neural Routing"
+title: "路径规划硬核突破：CaR (Construct-and-Refine) 笔记"
 date: 2026-02-20
 tags: ["AI", "Routing", "ICLR 2026", "Neural Solvers"]
 ---
