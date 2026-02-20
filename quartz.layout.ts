@@ -43,12 +43,10 @@ export const defaultContentPageLayout: PageLayout = {
   ],
   right: [
     Component.Graph(),
-    Component.DesktopOnly(Component.TachikomaStatus()), // <--- 电脑端：紧贴图谱下方
     Component.DesktopOnly(Component.TableOfContents()),
     Component.Backlinks(),
   ],
   afterBody: [
-    Component.MobileOnly(Component.TachikomaStatus()), // <--- 移动端：移至文章底部
   ],
 }
 
