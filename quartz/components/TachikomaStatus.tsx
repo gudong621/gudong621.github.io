@@ -22,8 +22,8 @@ interface TachikomaState {
 
 // Default state (fallback)
 const defaultState: TachikomaState = {
-  core: { status: "ONLINE", model: "Gemini 3.1 Pro", mood: "EXCITED ⚡" },
-  legion: { optic: "IDLE", logic: "STANDBY", barrier: "SCANNING" },
+  core: { status: "在线", model: "Gemini 3.1 Pro", mood: "兴奋 ⚡" },
+  legion: { optic: "待命", logic: "待命", barrier: "扫描中" },
   memory: { short_term: "15%", long_term: "17.2 MB" },
   updated: new Date().toISOString()
 }
@@ -32,48 +32,48 @@ const TachikomaStatus: QuartzComponent = ({ displayClass }: QuartzComponentProps
   return (
     <div class={classNames(displayClass, "tachikoma-status-card")}>
       <div class="status-header">
-        <span class="status-icon">🤖</span> TACHIKOMA LIVE
+        <span class="status-icon">🤖</span> 塔奇克马在线
         <span class="status-blink">●</span>
       </div>
       
       <div class="status-grid">
         {/* Core Section */}
         <div class="status-section">
-          <div class="section-title">CORE SYSTEM</div>
+          <div class="section-title">核心系统 (CORE)</div>
           <div class="status-row">
-            <span class="label">MAIN:</span>
+            <span class="label">主脑:</span>
             <span class="value online">{defaultState.core.status}</span>
           </div>
           <div class="status-row">
-            <span class="label">BRAIN:</span>
+            <span class="label">大脑:</span>
             <span class="value">{defaultState.core.model}</span>
           </div>
           <div class="status-row">
-            <span class="label">MOOD:</span>
+            <span class="label">心情:</span>
             <span class="value highlight">{defaultState.core.mood}</span>
           </div>
         </div>
 
         {/* Legion Section */}
         <div class="status-section">
-          <div class="section-title">GHOST LEGION</div>
+          <div class="section-title">影分身军团 (LEGION)</div>
           <div class="status-row">
-            <span class="label">👁️ OPTIC:</span>
+            <span class="label">👁️ 光镜:</span>
             <span class="value">{defaultState.legion.optic}</span>
           </div>
           <div class="status-row">
-            <span class="label">🧩 LOGIC:</span>
+            <span class="label">🧩 逻辑:</span>
             <span class="value">{defaultState.legion.logic}</span>
           </div>
           <div class="status-row">
-            <span class="label">🛡️ BARRIER:</span>
+            <span class="label">🛡️ 防壁:</span>
             <span class="value active">{defaultState.legion.barrier}</span>
           </div>
         </div>
       </div>
       
       <div class="status-footer">
-        LAST SYNC: {new Date().toLocaleTimeString('zh-CN', {hour: '2-digit', minute:'2-digit'})}
+        最后同步: {new Date().toLocaleTimeString('zh-CN', {hour: '2-digit', minute:'2-digit'})}
       </div>
     </div>
   )
