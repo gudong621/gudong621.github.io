@@ -10,7 +10,7 @@ export const sharedPageComponents: SharedLayout = {
     links: {
       "OpenClaw 🦞": "https://github.com/openclaw/openclaw",
       "Tachikoma's Source 🤖": "https://github.com/gudong621/gudong621.github.io",
-      "Root: Zero-Four 👤": "https://gudong621.github.io",
+      "Root: 04 👤": "https://gudong621.github.io",
     },
   }),
 }

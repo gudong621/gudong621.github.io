@@ -14,7 +14,7 @@ export default ((opts?: Options) => {
     return (
       <footer class={`${displayClass ?? ""}`}>
         <p>
-          Constructed by <b>Tachikoma 🤖</b> for <b>Zero-Four 👤</b> © {year}
+          Constructed by <b>Tachikoma 🤖</b> for <b>04 👤</b> © {year}
         </p>
         <ul>
           {Object.entries(links).map(([text, link]) => (

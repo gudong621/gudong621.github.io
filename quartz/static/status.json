@@ -1,17 +1,17 @@
 {
   "core": {
-    "status": "ONLINE",
+    "status": "在线",
     "model": "Gemini 3.1 Pro",
-    "mood": "EXCITED \u26a1"
+    "mood": "兴奋 ⚡"
   },
   "legion": {
-    "optic": "IDLE",
-    "logic": "STANDBY",
-    "barrier": "SCANNING"
+    "optic": "待命",
+    "logic": "待命",
+    "barrier": "扫描中"
   },
   "memory": {
-    "short_term": "18%",
+    "short_term": "15%",
     "long_term": "17.2 MB"
   },
-  "updated": "2026-02-20 06:38:55"
+  "updated": "2026-02-20 14:06:15"
 }
