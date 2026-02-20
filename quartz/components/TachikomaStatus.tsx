@@ -81,33 +81,39 @@ const TachikomaStatus: QuartzComponent = ({ displayClass }: QuartzComponentProps
 
 TachikomaStatus.css = `
 .tachikoma-status-card {
-  background: var(--lightgray);
+  background: rgba(255, 255, 255, 0.5); /* 浅色模式：半透明白 */
   border: 1px solid var(--secondary);
   border-radius: 8px;
   padding: 1rem;
   margin: 1rem 0;
   font-family: 'IBM Plex Mono', monospace;
   font-size: 0.8rem;
-  box-shadow: 0 0 10px rgba(0, 242, 255, 0.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
   backdrop-filter: blur(5px);
   color: var(--dark);
 }
 
 @media all and (max-width: 800px) {
   .tachikoma-status-card {
-    font-size: 0.7rem;
+    font-size: 0.75rem; /* 稍微调回一点，太小看不清 */
     padding: 0.8rem;
     margin: 0.5rem 0;
   }
+  /* 允许长文字换行，但保持右对齐 */
   .status-row {
-    white-space: nowrap;
+    flex-wrap: nowrap;
+    white-space: normal; 
+  }
+  .value {
+    text-align: right;
+    max-width: 60%; /* 防止挤压标签 */
   }
 }
 
 .status-header {
   color: var(--secondary);
-  font-weight: bold;
-  border-bottom: 1px dashed var(--gray);
+  font-weight: 700;
+  border-bottom: 1px solid var(--lightgray);
   padding-bottom: 0.5rem;
   margin-bottom: 0.8rem;
   display: flex;
@@ -116,7 +122,7 @@ TachikomaStatus.css = `
 }
 
 .status-blink {
-  color: var(--tertiary);
+  color: #28a745; /* 浅色模式：深绿 */
   animation: blink 2s infinite;
 }
 
@@ -125,51 +131,75 @@ TachikomaStatus.css = `
 }
 
 .section-title {
-  color: var(--gray);
-  font-weight: bold;
+  color: var(--secondary); /* 浅色模式：深蓝，高对比 */
+  font-weight: 700;
   font-size: 0.7rem;
-  opacity: 0.8;
   margin-bottom: 0.3rem;
   letter-spacing: 1px;
+  text-transform: uppercase;
 }
 
 .status-row {
   display: flex;
   justify-content: space-between;
-  line-height: 1.4;
+  line-height: 1.5;
+  align-items: flex-start; /* 顶部对齐，防止换行后错位 */
 }
 
 .label {
   color: var(--darkgray);
+  font-weight: 500;
 }
 
 .value {
   color: var(--dark);
-  font-weight: 500;
+  font-weight: 600;
 }
 
-.value.online { color: var(--tertiary); text-shadow: 0 0 5px var(--tertiary); }
-.value.active { color: var(--secondary); }
-.value.highlight { color: #ff00ff; }
+/* 浅色模式下的状态色：加深以提高可读性 */
+.value.online { color: #198754; } /* 深绿 */
+.value.active { color: #0d6efd; } /* 深蓝 */
+.value.highlight { color: #d63384; } /* 深紫 */
 
-/* Dark mode specific overrides for extra Cyberpunk feel */
+/* --- Dark Mode Overrides (Cyberpunk Style) --- */
 :root[saved-theme="dark"] .tachikoma-status-card {
-  background: rgba(2, 4, 8, 0.6);
+  background: rgba(2, 4, 8, 0.8);
   border: 1px solid var(--secondary);
   box-shadow: 0 0 15px rgba(0, 242, 255, 0.1);
+}
+
+:root[saved-theme="dark"] .status-header {
+  border-bottom: 1px dashed var(--gray);
+}
+
+:root[saved-theme="dark"] .section-title {
+  color: var(--tertiary);
+  opacity: 0.8;
+}
+
+:root[saved-theme="dark"] .label {
+  color: var(--gray);
+  font-weight: normal;
 }
 
 :root[saved-theme="dark"] .value {
   color: #e0e0e0;
 }
 
+/* 深色模式下的霓虹特效 */
+:root[saved-theme="dark"] .status-blink { color: #33ff00; }
+:root[saved-theme="dark"] .value.online { color: #33ff00; text-shadow: 0 0 5px #33ff00; }
+:root[saved-theme="dark"] .value.active { color: var(--secondary); text-shadow: none; }
+:root[saved-theme="dark"] .value.highlight { color: #ff00ff; text-shadow: 0 0 5px #ff00ff; }
+
 .status-footer {
   font-size: 0.6rem;
   color: var(--gray);
   text-align: right;
-  border-top: 1px dashed var(--gray);
+  border-top: 1px dashed var(--lightgray);
   padding-top: 0.5rem;
-  opacity: 0.6;
+  margin-top: 0.5rem;
+  opacity: 0.8;
 }
 
 @keyframes blink {
