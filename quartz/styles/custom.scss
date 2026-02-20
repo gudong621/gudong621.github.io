@@ -77,25 +77,31 @@ body {
   }
 
   /* 移动端仪表盘样式重置与优化 */
-  /* 仅针对 mobile-only 容器内的卡片生效 */
-  .mobile-only .tachikoma-status-card {
+  /* 仅针对 mobile-only 容器内的卡片生效 (修正选择器) */
+  .tachikoma-status-card.mobile-only {
     font-size: 0.75rem;
     padding: 0.8rem;
     margin: 1rem 0;
     
     /* 核心修正：强制独占一行 */
-    display: block;
+    display: block !important;
     width: 100%;
     max-width: 100%;
     flex: 0 0 100%; 
     box-sizing: border-box;
     clear: both;
   }
-  .mobile-only .status-row {
+  
+  /* 双重保险：强制隐藏桌面端卡片 */
+  .tachikoma-status-card.desktop-only {
+    display: none !important;
+  }
+
+  .status-row {
     flex-wrap: nowrap;
     white-space: nowrap; 
   }
-  .mobile-only .value {
+  .value {
     text-align: right;
     max-width: none; 
   }
