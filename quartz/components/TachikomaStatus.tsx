@@ -98,11 +98,15 @@ TachikomaStatus.css = `
   .tachikoma-status-card {
     font-size: 0.75rem;
     padding: 0.8rem;
-    margin: 1rem auto; /* 居中显示 */
-    width: 90%; /* 占据大部分宽度，防止被压扁 */
-    min-width: 280px; /* 强制最小宽度，确保文字不换行 */
-    max-width: 350px; /* 限制最大宽度，保持精致感 */
-    display: block; /* 确保它是块级元素，独占一行 */
+    margin: 1rem 0 !important;
+    
+    /* 核心修正：强制独占一行 */
+    display: block !important;
+    width: 100% !important;
+    max-width: 100% !important;
+    flex: 0 0 100% !important; /* 在 Flex 容器中强制换行 */
+    box-sizing: border-box;
+    clear: both;
   }
   .status-row {
     flex-wrap: nowrap;
