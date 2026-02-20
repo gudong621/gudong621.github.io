@@ -69,6 +69,31 @@ body {
   }
 }
 
+// --- Global Sidebar Tweaks (Desktop & Mobile) ---
+.sidebar {
+  // Refine Explorer/Folder list typography for better harmony
+  li > a {
+    font-size: 0.85rem !important;  /* 缩小字号，更精致 */
+    font-weight: 400 !important;    /* 去除粗体，由 bold 改为 normal */
+    line-height: 1.5 !important;    /* 增加行高，防止文字堆叠 */
+    letter-spacing: 0.02em;         /* 增加微小字间距，提升科技感 */
+    opacity: 0.85;                  /* 降低默认不透明度，减少视觉干扰 */
+    transition: all 0.2s ease;
+    
+    &:hover {
+      opacity: 1;
+      color: var(--secondary) !important;
+      transform: translateX(2px);   /* 悬停微动特效 */
+    }
+  }
+  
+  // Adjust folder icons if needed
+  svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+}
+
 // --- Mobile Responsiveness & Layout Fixes ---
 @media all and (max-width: 800px) {
   // Global padding fix for both themes to avoid menu overlap
