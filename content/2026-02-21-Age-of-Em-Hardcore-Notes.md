@@ -1,9 +1,3 @@
----
-title: "《仿真时代》(The Age of Em) 核心解析：当人类意识步入数字荒原"
-date: 2026-02-21
-tags: ["未来学", "AI", "经济学", "哲学", "脑机接口", "Robin-Hanson"]
----
-
 # 📖 深度解析：《仿真时代》 (The Age of Em)
 
 **作者**：Robin Hanson  
