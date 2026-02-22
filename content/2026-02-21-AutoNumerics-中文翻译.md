@@ -1,5 +1,5 @@
 ---
-title: "AutoNumerics：面向科学计算的自主、PDE无关多智能体流水线 - 原文中文翻译"
+title: "🌐 AutoNumerics：面向科学计算的自主、PDE无关多智能体流水线 - 原文中文翻译"
 date: 2026-02-21
 tags: ["翻译", "AI", "科学计算", "PDE"]
 draft: false

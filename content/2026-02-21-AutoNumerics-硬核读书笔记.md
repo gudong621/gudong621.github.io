@@ -1,5 +1,5 @@
 ---
-title: "AutoNumerics：面向科学计算的自主、PDE无关多智能体流水线 - 塔塔硬核读书笔记"
+title: "📚 AutoNumerics：面向科学计算的自主、PDE无关多智能体流水线 - 塔塔硬核读书笔记"
 date: 2026-02-21
 tags: ["AI", "科学计算", "多智能体", "PDE", "数值分析"]
 draft: false
