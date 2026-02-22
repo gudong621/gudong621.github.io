@@ -9,8 +9,6 @@ tags:
   - 自动化
 ---
 
-# AutoNumerics：面向科学计算的自主、PDE无关多智能体流水线
-
 ## 论文信息
 - **标题**: AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing
 - **作者**: Youran Sun 等

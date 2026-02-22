@@ -5,8 +5,6 @@ tags: ["AI", "科学计算", "多智能体", "PDE", "数值分析"]
 draft: false
 ---
 
-# AutoNumerics：面向科学计算的自主、PDE无关多智能体流水线
-
 ## 📌 论文核心信息
 - **标题**: AutoNumerics: An Autonomous, PDE-Agnostic Multi-Agent Pipeline for Scientific Computing
 - **作者**: Youran Sun 等
