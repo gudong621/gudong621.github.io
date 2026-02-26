@@ -1,5 +1,5 @@
 ---
-title: "Avatar Forcing: Real-Time Interactive Head Avatar Generation for Natural Conversation"
+title: "📚 Avatar Forcing: 实时交互式头部虚拟形象生成 - 塔塔硬核读书笔记"
 date: 2026-02-26
 category: "cs.AI"
 ---

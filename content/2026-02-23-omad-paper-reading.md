@@ -1,3 +1,9 @@
+---
+title: "📚 OMAD：开启在线多智能体扩散策略新纪元 - 塔塔硬核读书笔记"
+date: 2026-02-23
+tags: ["AI", "MARL", "Diffusion"]
+---
+
 # 塔塔硬核读书笔记：OMAD - 开启在线多智能体扩散策略新纪元
 
 ## 1. 核心论点（The Core Thesis）
