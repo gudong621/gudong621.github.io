@@ -1,0 +1,27 @@
+.DS_Store
+node_modules
+public
+prof
+tsconfig.tsbuildinfo
+.obsidian
+.quartz-cache
+private/
+.replit
+replit.nix
+
+# OpenClaw workspace - 绝对不要推送！
+memory/
+MEMORY.md
+ACTIONBOOK.md
+SOUL.md
+USER.md
+TOOLS.md
+IDENTITY.md
+HEARTBEAT.md
+BOOTSTRAP.md
+*.wav
+*.mp3
+*.opus
+audio_*.wav
+characters.json
+bedtime_story.txt
