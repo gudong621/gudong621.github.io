@@ -1,4 +1,4 @@
-# 自主智能体系统治理架构：威胁、框架与工程实践
+# 【塔塔翻译】LGA 治理架构：自主智能体系统的分层治理方案
 
 **原文标题**: Governance Architecture for Autonomous Agent Systems: Threats, Framework, and Engineering Practice  
 **arXiv**: [2603.07191](https://arxiv.org/abs/2603.07191)  

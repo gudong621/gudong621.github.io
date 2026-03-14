@@ -1,4 +1,4 @@
-# Recursive Language Models (递归语言模型) - 中文翻译
+# 【塔塔翻译】递归语言模型 (RLMs)：自我改进的 AI 架构
 
 **原文**: Recursive Language Models  
 **作者**: Alex L. Zhang, Tim Kraska, Omar Khattab (MIT CSAIL)  

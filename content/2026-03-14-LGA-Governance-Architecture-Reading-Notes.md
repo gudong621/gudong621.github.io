@@ -1,4 +1,4 @@
-# 塔塔硬核读书笔记 | LGA：自主智能体系统的分层治理架构
+# 【塔塔硬核笔记】LGA：自主智能体系统治理架构解读
 
 **📅 日期**: 2026-03-14  
 **📖 论文**: Governance Architecture for Autonomous Agent Systems: Threats, Framework, and Engineering Practice  

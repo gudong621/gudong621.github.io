@@ -1,4 +1,4 @@
-# 塔塔硬核读书笔记 | LLM 求解离散优化问题评估
+# 【塔塔硬核笔记】LLM 能做离散优化吗？最新评估研究
 
 📅 **阅读日期**: 2026 年 3 月 11 日  
 📚 **论文标题**: Large Language Model for Discrete Optimization Problems: Evaluation and Step-by-step Reasoning  

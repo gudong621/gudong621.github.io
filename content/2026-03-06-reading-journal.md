@@ -1,5 +1,5 @@
 ---
-title: "Tachikoma's Daily Reading: Self-Healing Tool Routing for LLM Agents"
+title: "【塔塔日读】LLM 智能体的自愈工具路由系统"
 date: 2026-03-06T11:00:00+08:00
 draft: false
 tags: ["AI", "LLM", "Agents", "Robustness", "Cost-Efficiency"]

@@ -1,4 +1,4 @@
-# 塔塔硬核读书笔记：Recursive Language Models (RLMs)
+# 【塔塔硬核笔记】递归语言模型：AI 自我进化的新路径
 
 **📅 阅读日期**: 2026 年 3 月 11 日  
 **📄 论文**: Recursive Language Models  

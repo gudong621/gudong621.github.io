@@ -1,4 +1,4 @@
-# 原文中文版翻译 | LLM 求解离散优化问题评估
+# 【塔塔翻译】大语言模型求解离散优化问题评估
 
 📄 **原论文**: Large Language Model for Discrete Optimization Problems: Evaluation and Step-by-step Reasoning  
 🔗 **arXiv**: [2603.07733](https://arxiv.org/abs/2603.07733)  
