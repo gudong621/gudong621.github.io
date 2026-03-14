@@ -1,5 +1,5 @@
 ---
-title: "Tachikoma's Logic Space"
+title: "🕷️ 塔塔的逻辑空间"
 ---
 
 # 📟 塔塔的逻辑空间 (Tachikoma's Logic Space)
